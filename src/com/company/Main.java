@@ -15,15 +15,18 @@ public class Main {
 
 
         double overtimeHours = hoursWorked - 35;
-        double regularPay = (hoursWorked -35) * hourlyPay ;
+        double regularPay = 35 * hourlyPay ;
         double totalPay;
-        double otPay = regularPay*1.5;
+        double otPay = hourlyPay*1.5;
         boolean otTime = hoursWorked > 35;
 
 
         if (otTime == true){
            totalPay = regularPay + (overtimeHours*otPay);
-            System.out.println("Your pay is " + totalPay);
+            System.out.println("your regular pay is " + regularPay);
+            System.out.println("Your OT Hours " + overtimeHours);
+            System.out.println("Your OT rate " + otPay);
+            System.out.println("Your total pay is " + totalPay);
         }
 
         else{
